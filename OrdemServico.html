@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<title>Cadastro de Ordem de Serviços</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="ordemservico.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--===============================================================================================-->
+
+
+
+</head>
+<body>
+    
+	<div>
+        <ul class="navbar">
+          <img id="logo" src="logo.png">
+            <li><a id="navegacao" href="../login/login.html"><span class="material-icons">logout</span></a></li>
+        </ul>
+    </div>
+    
+    
+
+    <div id="lista-cadastro-ordemservico">
+
+      <h3>Nova Ordem de Serviço</h3>
+
+      <div id="busca">
+      </div>
+
+        <div>  
+        <div class="label-float">
+            <input list="lista-cliente" type="text" placeholder=" " required/>
+            <label>Selecione um Cliente</label>
+        </div>
+        <datalist id="lista-cliente">
+            <option>Caio</option>
+            <option>Pedro</option>
+        </datalist>
+        </div>
+            
+        <div class="label-float">
+        <input type="text" placeholder=" " required/>
+        <label>Equipamento do Cliente</label>
+        </div>
+
+        <div class="label-float">
+        <input type="date" placeholder=" " required/>
+        <label>Data da Entrada</label>
+        </div>
+        
+
+        
+        <div class="label-float">
+        <input type="text" placeholder=" " required/>
+        <label>Relato do Cliente</label>
+
+        <div class="label-float">
+            <input list="lista-status" type="text" placeholder=" " required/>
+            <label>Selecione um Status</label>
+        </div>
+        <datalist id="lista-status">
+            <option>Em análise</option>
+            <option>Orçamento enviado</option>
+            <option>Orçamento aprovado</option>
+            <option>Cancelado</option>
+            <option>Em andamento</option>
+            <option>Pronto para entrega</option>
+            <option>Entregue</option>
+        </datalist>
+        </div>
+
+        <div class="label-float">
+            <input type="text" placeholder=" "/>
+            <label>Observações do Técnico</label>
+        </div>
+        
+
+        
+        <div>
+
+            <div id="busca">
+            </div>
+
+            
+
+
+
+            <div class="label-float">
+            <input list="lista-opcao" type="text" placeholder=" " required/>
+            <label>Selecione Produto ou Serviço</label>
+            </div>
+
+            <datalist id="lista-opcao">
+            <option>Produto</option>
+            <option>Serviço</option>
+            
+            </datalist>
+
+
+            <div class="label-float">
+            <input list="lista-servicos" type="text" placeholder=" " required/>
+            <label>Selecione um Serviço(Produto)</label>
+            </div>
+
+            <datalist id="lista-servicos">]
+            <option value="Em análise"{{ old('status', '') == 'Em análise' ? "selected" : '' }}>Em análise</option>
+            <option>Formatação</option>
+            <option>Manutenção em hardware</option>
+            <option>Teste</option>
+            </datalist>
+            <div class="label-float">
+                <input type="number"  placeholder=" " required/>
+                <label>Desconto</label>
+            </div>
+
+            <!-- <div class="label-float">
+            <input list="lista-produtos" type="text" placeholder=" " required/>
+            <label>Selecione um Produto</label>
+            </div>
+
+            <datalist id="lista-produtos">
+            <option>Teclado</option>
+            <option>Mouse</option>
+            <option>Memória DDR3</option>
+            <option>Pendrive</option>
+            <option>Teste</option>
+            </datalist> -->
+
+            
+
+            
+            <div class="label-float">
+            <input type="number"  placeholder=" " required/>
+            <label>Quantidade</label>
+            </div>
+
+            <button class="botao-cadastrar">
+            Cadastrar Item na Ordem
+            </button>
+
+            <div id="busca">
+            </div>
+
+
+            <table id="tabela">
+
+            <thead>
+                <thead>
+                    <tr>
+                        <th>Serviço/Produto</th>
+                        <th>Categoria</th>
+                        <th>Quantidade</th>
+                        <th>Valor</th>
+                        <th>Desconto</th>
+                        <th>Valor total</th>
+                    </tr>
+                </thead>
+            <tbody>
+                    <tr>
+                        <td>Formatação</td>
+                        <td>Manutenção</td>
+                        <td>01</td>
+                        <th>R$500,00</th>
+                        <th>10%</th>
+                        <th>R$450,00</th>
+                        <td>
+                            <a href="/usuario/edit/{{ usuario.id }}">
+                            <span class="material-icons">edit</span>
+                            </a>
+                        </td>
+                        <td>
+                            
+                            <button type="submit"
+                            onclick="return confirm('Certeza que gostaria de deletar este usuario: {{ usuario.username }} ?')";>
+                                <span class="material-icons">delete</span>
+                            </button>
+                            </form>
+                        </td>
+                    <tr>
+                            <td>limpeza</td>
+                            <td>Manutenção</td>
+                            <td>01</td>
+                            <th>R$150,00</th>
+                            <th>10%</th>
+                            <th>R$135,00</th>
+                            <td>
+                            <a href="/usuario/edit/{{ usuario.id }}">
+                                <span class="material-icons">edit</span>
+                            </a>
+                            </td>
+                            <td>
+                            <button type="submit"
+                                onclick="return confirm('Certeza que gostaria de deletar este usuario: {{ usuario.username }} ?')";>
+                                <span class="material-icons">delete</span>
+                                </button>
+                            </form>
+                            </td>
+                    </tr>
+            </tbody>
+            </table>
+            <div id="busca">
+            </div>
+            
+            <div>   
+                <div class="label-float">
+                <input type="date" placeholder=" " required/>
+                <label>Data da Entrega</label>
+                </div>
+        
+                <div class="label-float">
+                <input list="lista-pagamento" type="text" placeholder=" " required/>
+                <label>Selecione uma Forma de Pagamento</label>
+                </div>
+                <datalist id="lista-pagamento">
+                <option>Dinheiro</option>
+                <option>Cartão de Crédito</option>
+                <option>Cartão de Débito</option>
+                <option>Pix</option>
+                </datalist>
+                <div class="label-float">
+                <input type="number"  placeholder=" " required/>
+                <label>Valor Bruto</label>
+                </div>
+                
+                <div class="label-float">
+                <input type="number"  placeholder=" " required/>
+                <label>Valor Liquido</label>
+                </div>
+            </div>
+        
+            <div>
+                <div class="botoes">
+                <button class="botao-cancelar">
+                    Cancelar
+                </button>
+        
+                <button class="botao-cadastrar">
+                    Cadastrar 
+                </button>
+            </div>
+
+        
+
+        
+          
+        </div>
+      
+
+      
+
+      
+     
+
+    </div>
+
+    
+    
+
+      
+	
+</body>
+</html>

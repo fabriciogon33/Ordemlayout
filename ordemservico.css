@@ -1,0 +1,26 @@
+#lista-cadastro-ordemservico {
+    margin-top: 160px;
+    width: 970px;
+    height: 1560px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: -3px -5px 6px #00000024;
+    border-radius: 15px;
+    opacity: 1;
+    float: right;
+  }
+  containertask {
+    flex: 1;
+    margin-top: 8;
+    flex:initial;
+    align-items: center;
+    background-color:  #FFF;
+    border-radius:  5px;
+    justify-content: space-between ;
+  }
+  tasklistcss {
+    color: #121212;
+    font-size: 5px;
+    padding-right: 10px;
+    padding-left: 15px;
+  
+  }
